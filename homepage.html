@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="css/homepage_style.css">
+    <script src="api-service.js" type="text/javascript" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="background-image:url(library.jpg);background-attachment: fixed;">
+    <div id=div1>
+        <h3 style="position:relative; left:25px; font-size:20px;">LIBRARY MANAGEMENT SYSTEM</h3>
+        <a style="float:right; position:relative; bottom:40px; right:50px;" href="admin.html" target="_self">Admin</a>
+    </div>
+    <div id=div2>
+        <h1> Welcome to Our Library!</h1>
+        <form action="/search">
+            <input type="search" value="Search Books..." style="padding-left: 20px;">
+            <button type="button" onclick="" style="width:90px;height:34px;">SEARCH</button>
+            <!-- <img  type="button" onclick=" " src="filter.png" alt="Filter" style="background-color:blanchedalmond; width: 32px; height:31px; border-style:solid; border-width:1.7px; border-color: black; position:relative; top:11px;"> -->
+            <button class="filter-button" onmouseover="toggleDropdown()" type="button"
+                style="height:34px;width:40px; position: relative; top: 11px;">
+                <img src="filter.png" alt="Filter" style="height:31px; position: relative; right: 3px;">
+            </button>
+            <div id="myDropdown" class="dropdown-content"
+                style="background-color: white;">
+                <a href="#" onmouseover="toggleGenre();hideLanguage();">Genre</a>
+                <a href="#" onmouseover="toggleLanguage();hideGenre();">Language</a>
+            </div>
+            <div id="genreList" class="genreNames" onmouseover="hideLanguage()" onmouseleave="hideGenre();hideDropdown();"
+                style="background-color: white;">
+                <!-- <ul id="genreList"  style="background-color: white; display: flex;"></ul> -->
+            </div>
+            <div id="languagesList" class="languageNames" onmouseleave="hideLanguage();hideDropdown();"
+                style="background-color: white;">
+                <!-- <ul id="languagesList" style="background-color: white; display: flex ;"></ul> -->
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
